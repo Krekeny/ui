@@ -1,3 +1,7 @@
+// Get actual Vue instance
+import { app } from "@storybook/vue3";
+import { registerGlobalComponents } from "../src/workflow";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +10,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+app = registerGlobalComponents(app);
