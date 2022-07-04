@@ -1,35 +1,35 @@
-# ui
+![image](https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png)
 
-This template should help get you started developing with Vue 3 in Vite.
+# getting started
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+expo init --template expo-template-storybook AwesomeStorybook
 ```
 
-### Compile and Hot-Reload for Development
+# Ondevice
 
-```sh
-npm run dev
+```
+yarn start
 ```
 
-### Compile and Minify for Production
+If you add new stories on the native (ondevice version) you either need to have the watcher running or run the stories loader
 
-```sh
-npm run build
+To update the stories one time
+
+```
+yarn update-stories
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+To watch the stories files
 
-```sh
-npm run lint
+```
+yarn storybook-watcher
+```
+
+Note that this is only necessary for when you add or remove a story file.
+
+# Web
+
+```
+yarn storybook
 ```
