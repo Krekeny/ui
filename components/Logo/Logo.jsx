@@ -1,4 +1,5 @@
 import React from "react";
+import { TextLink } from "solito/link";
 // import { Pressable, Linking } from "react-native";
 // import { Link } from "@react-navigation/native";
 import Svg, { Path } from "react-native-svg";
@@ -34,12 +35,14 @@ const LogoSVG = ({ color }) => {
 };
 
 export const Logo = ({ href, ...rest }) => {
+  href = "https://storybook.js.org";
+
   return (
     <>
       {href ? (
-        <a href={href}>
+        <TextLink href={href}>
           <LogoSVG {...rest} />
-        </a>
+        </TextLink>
       ) : (
         <LogoSVG {...rest} />
       )}
