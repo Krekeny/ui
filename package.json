@@ -12,7 +12,8 @@
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "web-and-app": ""
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
