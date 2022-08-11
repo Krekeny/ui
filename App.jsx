@@ -1,26 +1,26 @@
-import { StyleSheet, Text } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import StorybookUIRoot from "./.ondevice/Storybook";
+import { Provider } from "./app/provider";
+import { NativeNavigation } from "./app/navigation/native";
+
+// import StorybookUIRoot from "./.ondevice/Storybook";
 // export { StorybookUIRoot as default };
+
+// TODO wait for @storybook/react-native to support 6.4
+// const App = () => {
+//   return (
+//     <SafeAreaProvider style={styles.container}>
+//       <SafeAreaView style={styles.container}>
+//         <StorybookUIRoot />
+//       </SafeAreaView>
+//     </SafeAreaProvider>
+//   );
+// };
 
 const App = () => {
   return (
-    <SafeAreaProvider style={styles.container}>
-      <SafeAreaView style={styles.container}>
-        <StorybookUIRoot />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <Provider>
+      <NativeNavigation />
+    </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  text: {
-    fontSize: 25,
-    fontWeight: "500",
-  },
-});
 
 export default App;

@@ -24,17 +24,17 @@ export default LogoMeta;
 
 export const Basic = (args) => <Logo {...args} />;
 
-// const logoPressableArgs = {
-//   ...LogoMeta.args,
-//   href: "https://www.krekeny.com",
-// };
+const logoPressableArgs = {
+  ...LogoMeta.args,
+  href: "https://www.krekeny.com",
+};
 
-// export const WithPressable = (args) => <Logo {...logoPressableArgs} />;
+export const WithPressable = (args) => <Logo {...logoPressableArgs} />;
 
-// WithPressable.decorators = [
-//   (Story) => (
-//     <NavigationContainer linking={linking}>
-//       <Story />
-//     </NavigationContainer>
-//   ),
-// ];
+WithPressable.decorators = [
+  (Story) => (
+    // <NavigationContainer linking={linking}>
+    <Story />
+    // </NavigationContainer>
+  ),
+];

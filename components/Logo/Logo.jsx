@@ -35,7 +35,7 @@ const LogoSVG = ({ color }) => {
 };
 
 export const Logo = ({ href, ...rest }) => {
-  href = "https://storybook.js.org";
+  // href = "https://storybook.js.org";
 
   return (
     <>
