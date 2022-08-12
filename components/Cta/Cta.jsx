@@ -4,7 +4,7 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 export const Cta = ({ onPress, text }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Text style={styles.text}>{text}</Text>
+      <Text style={styles.text}>{text}this is just a test</Text>
     </TouchableOpacity>
   );
 };
