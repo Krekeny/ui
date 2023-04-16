@@ -1,5 +1,5 @@
-import { Provider } from "./app/provider";
-import { NativeNavigation } from "./app/navigation/native";
+import { Provider } from './app/provider';
+import { NativeNavigation } from './app/navigation/native';
 
 // import StorybookUIRoot from "./.ondevice/Storybook";
 // export { StorybookUIRoot as default };
@@ -16,11 +16,11 @@ import { NativeNavigation } from "./app/navigation/native";
 // };
 
 const App = () => {
-  return (
-    <Provider>
-      <NativeNavigation />
-    </Provider>
-  );
+	return (
+		<Provider>
+			<NativeNavigation />
+		</Provider>
+	);
 };
 
 export default App;

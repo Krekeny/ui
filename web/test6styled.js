@@ -2,8 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { StyleSheetManager } from 'styled-components';
 import { Cta2 } from '../components/Cta/Cta2';
-import MyComponent from './myComponent';
-// import { StyleSheet } from 'react-native-web';
+import { MyComponent } from './myComponent';
 
 const test = document.createElement('div');
 
@@ -21,10 +20,6 @@ customElements.define(
 		}
 
 		set myFunction(value) {
-			console.log(
-				'🚀 ~ file: test5.js:19 ~ ctaWeb ~ setmyFunction ~ value:',
-				value
-			);
 			this._myFunction = value;
 		}
 
@@ -48,22 +43,9 @@ customElements.define(
 
 			this.shadowRoot.appendChild(mountPoint);
 
-			// const style = document.createElement('style');
-
-			// style.id = 'react-native-stylesheet';
-
-			// style.textContent = `
-			//   .text {
-			//     color: '#ffffff';
-			//     font-weight: bold;
-			//   }
-			// `;
-
-			// appSlot.parentNode.insertBefore(style, appSlot.nextSibling);
-
 			render(
 				<StyleSheetManager target={appRoot}>
-					<Cta2 onPress={this.myFunction} />
+					<MyComponent onPress={this.myFunction} />
 				</StyleSheetManager>,
 				appSlot
 			);

@@ -1,15 +1,15 @@
-import { View, Text } from 'react-native-web';
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import React, { useState } from 'react';
+import { View, Text } from 'react-native';
 
-const StyledView = styled.div`
+const StyledView = styled(View)`
 	background-color: purple;
 	color: white;
 	border: 1px solid purple;
 	padding: 15px 30px;
 `;
 
-const StyledText = styled.p`
+const StyledText = styled(Text)`
 	background-color: purple;
 	color: white;
 	border: 1px solid purple;
@@ -20,6 +20,8 @@ export const Cta2 = ({ onPress, text, test }) => {
 	const [count, setCount] = useState(0);
 
 	const handleClick = () => {
+		console.log('click');
+
 		if (typeof onPress !== 'function') return;
 
 		setCount(count + 1);
@@ -28,8 +30,8 @@ export const Cta2 = ({ onPress, text, test }) => {
 	};
 
 	return (
-		<StyledView onClick={handleClick}>
-			<StyledText>blablabla {count}</StyledText>
+		<StyledView onStartShouldSetResponder={handleClick}>
+			<StyledText>Cta2 text {count}</StyledText>
 		</StyledView>
 	);
 };
