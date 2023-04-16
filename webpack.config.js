@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-	entry: './web/cta.js',
+	entry: './web/test6styled.js',
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),

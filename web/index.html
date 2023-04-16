@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title>
-</head>
+	<body>
+		<!-- <krui-cta id="test" text="egal" my-function="test2()"></krui-cta> -->
+	</body>
 
-<body>
-  <krui-cta></krui-cta>
+	<script>
+		function test() {
+			console.log('test');
+		}
 
-</body>
+		const cta = document.createElement('my-component');
+		cta.myFunction = test;
 
+		document.body.appendChild(cta);
+	</script>
 </html>

@@ -32,6 +32,7 @@ try {
 const getStories = () => {
   return [
     require("../components/Cta/Cta.stories.jsx"),
+    require("../components/Cta/Cta2.stories.jsx"),
     require("../components/Logo/Logo.stories.jsx"),
   ];
 };
